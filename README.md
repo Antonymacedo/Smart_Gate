@@ -1,4 +1,4 @@
-# Smart-gate
+# Smart-gate🤖
 Circuito usando ESP8266 para automatizar portão eletrico residencial, pode ser aberto pelo telefone usando o navegador 
 e o endereço de IP da placa ou pela Alexa (da amazon). Este projeto funciona com a seguinte lógica:
 
@@ -22,7 +22,7 @@ portão cuida disso sozinho. Com esse sistema, você consegue abrir ou fechar o 
 perder a funcionalidade original do controle remoto e do botão físico, que continuam funcionando em paralelo.
 
 
-## Materiais
+## Materiais🛠️
 
 **1.** ESP8266
 
@@ -46,18 +46,18 @@ OBS: Também é necessário cabos jumper e ferramentas como chaves philips.
 
 *  Conecte o NC do Relé no BOT do portão
 
-*  Conecte o COM do Relé no ANG (funciona da mesma forma do GND) do portão
+*  Conecte o COM do Relé no ANT (funciona da mesma forma do GND) do portão
 
 
 
-## Conexões
+## Conexões⚡
 
 | Componente | Pino do ESP8266 |
 |------------|-----------------|
 | IN  -> Relé  | D1            |
-| 5V  -> Relé  | VV            |
+| 5V  -> Relé  | VV -> ESP8266 |
 | GND -> Relé  | GND           |
-| 5V -> Transistor|VIN          |
+| 5V -> Transistor|VIN -> ESP8266 |
 
 
 | Ligação      |Componente     |
@@ -87,7 +87,7 @@ ________________________________________________________________________________
 
 
 
-## Código
+## Código💻
 
 ```
 #include <Arduino.h>
@@ -104,7 +104,7 @@ ________________________________________________________________________________
 #define SWITCH_ID "ID do switch no sinricPro"
 
 // --- Pinos
-#define RELAY_PIN D5
+#define RELAY_PIN D1
 #define BUTTON_PIN D6
 
 ESP8266WebServer server(80);
@@ -184,10 +184,25 @@ void loop() {
 ```
 
 
-## Resultado
+## Resultado📲
 
 
 https://github.com/user-attachments/assets/16e84ca1-dee2-4c12-9f7d-d13910c22081
 
 
-## cosideraçôes
+## cosideraçôes❗
+
+* Preste bastante atenção a lógica de funiconamento do seu portão, inclusive recomendo que leia o manual antes de iniciar o projeto em sua casa.
+
+* Certifique-se de que o portão quando abre completamente e fecha completamente está parando, para não causar uma sobrecorrente no motor que levara a um provavel curto posteriormente
+
+
+a placa do meu portão é essa:
+
+![D_652620-MLA83383484435_032025-C](https://github.com/user-attachments/assets/1071c696-73e1-4029-b3f8-6f4783bb3f92)
+
+mas acredito que a lógica de cada placa não deve mudar muito, então no maximo alguns nomes vão ser diferentes
+
+
+
+
