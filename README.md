@@ -28,19 +28,19 @@ perder a funcionalidade original do controle remoto e do botão físico, que con
 
 **2.** Relé **5V**
 
-**3.** Transistor UTC7805 (para abaixar de **12V** para **5V**)
+**3.** Step-Down (para abaixar de **12V** para **5V**)
 
-<img width="512" height="377" alt="image" src="https://github.com/user-attachments/assets/2e75465a-54ff-416d-b51d-0b6045f2fc26" />
 
 OBS: Também é necessário cabos jumper e ferramentas como chaves philips.
 
 ## Montagem 
 
-<img width="683" height="500" alt="download" src="https://github.com/user-attachments/assets/2a7685b7-6f96-4904-8562-4dcf02c36a35" />
+<img width="683" height="500" alt="download" src="https://github.com/user-attachments/assets/3f138952-7eb7-486e-a46a-d2fdd8d1eb9f" />
 
-* Conecte o 12V do portão na "entrada" do transistor e o GND do portão no GND do transistor
 
-* Conecte a saida de 5V do transistor no ESP8266 e um dos GND do portão tambem no ESP
+* Conecte o 12V do portão na "entrada" do Step-Down e o GND do portão no GND do Step-Down
+
+* Conecte a saida de 5V do Step-Down no ESP8266 e um dos GND do portão tambem no ESP
 
 * Conecte o 5V do ESP no Relé, e o GND do ESP no GND do Relé
 
@@ -57,13 +57,13 @@ OBS: Também é necessário cabos jumper e ferramentas como chaves philips.
 | IN  -> Relé  | D1            |
 | 5V  -> Relé  | VV -> ESP8266 |
 | GND -> Relé  | GND           |
-| 5V -> Transistor|VIN -> ESP8266 |
+| 5V -> Step-Down|VIN -> ESP8266 |
 
 
 | Ligação      |Componente     |
 |--------------|---------------|
-| 12V -> Portão| Transistor    |
-| GND -> Portão| Transistor    |
+| 12V -> Portão| Step-Down    |
+| GND -> Portão| Step-Down    |
 | GND -> Portão| GND -> ESP8266|
 
 
@@ -81,9 +81,9 @@ ________________________________________________________________________________
 
 ______________________________________________________________________________________________________________________________________________________________________________________
 
-**Pinagem do Transistor**
+**Pinagem do Step-Down**
 
-<img width="683" height="500" alt="download" src="https://github.com/user-attachments/assets/001ded3d-dac3-454e-a458-8ce7cf0a140f" />
+<img width="683" height="500" alt="download" src="https://github.com/user-attachments/assets/50c1a8d8-749a-4232-a13f-d3fc2d8aa1de" />
 
 
 
@@ -196,6 +196,7 @@ https://github.com/user-attachments/assets/16e84ca1-dee2-4c12-9f7d-d13910c22081
 
 * Certifique-se de que o portão quando abre completamente e fecha completamente está parando, para não causar uma sobrecorrente no motor que levara a um provavel curto posteriormente
 
+* Não se esqueça de regular o Step-Down
 
 a placa do meu portão é essa:
 
