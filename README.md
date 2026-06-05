@@ -1,4 +1,11 @@
 # Smart-gate🤖
+
+
+![Language](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+
+
 Circuito usando ESP8266 para automatizar portão eletrico residencial, pode ser aberto pelo telefone usando o navegador 
 e o endereço de IP da placa ou pela Alexa (da amazon). Este projeto funciona com a seguinte lógica:
 
