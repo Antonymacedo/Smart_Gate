@@ -5,8 +5,8 @@
 #include <SinricProSwitch.h>
 
 // --- Configurações WiFi e SinricPro
-#define WIFI_SSID "JACQUE"
-#define WIFI_PASS "1108257370"
+#define WIFI_SSID "Sua_Rede_WIFI"
+#define WIFI_PASS "Sua_Senha"
 #define APP_KEY "e3276e31-8ae1-4d5a-86d0-282d37908333"
 #define APP_SECRET "6cc0b9de-6027-4a36-8dbe-659bc897002b-35787aa1-b003-42a1-8f9b-067ed3923edc"
 #define SWITCH_ID "687c3e69929fca43027f9536"
